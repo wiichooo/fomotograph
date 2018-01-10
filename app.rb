@@ -34,3 +34,10 @@ get '/products/:id' do
   @product = Product.find(params[:id])
   erb :product_id
 end
+
+get '/deals' do
+  # PAGE DISPLAYING ALL PHOTOS FROM ONE LOCATION
+  @page_title = "Deals"
+  @products = Product.deals
+  erb :deals
+end

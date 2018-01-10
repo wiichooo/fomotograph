@@ -1,0 +1,17 @@
+<h1> Deals >$10 </h1>
+<div id='wrapper'>
+
+  <% @products.each do |product| %>
+  <a href='/products/<%= product.id %>'>
+  <div class='product'>
+    <div class='thumb'>
+      <img src='<%= product.url %>' />
+    </div>
+    <div class='caption'>
+    <%= product.title %> ---- <%= product.location != 'us' ? product.location.capitalize : product.location.upcase %> 
+    </div>
+  </div>
+  </a>
+  <% end %>
+
+</div>
